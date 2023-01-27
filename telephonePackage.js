@@ -51,15 +51,16 @@ class Telephone {
 class TelephoneObserver {
   update(phoneNumber) {
     this.viewObserver(phoneNumber);
+
     this.dialObserver(phoneNumber);
   }
 
   viewObserver = (phoneNumber) => {
-    console.log(phoneNumber);
+    console.log(`PhoneNumber: ${phoneNumber}`);
   };
 
   dialObserver = (phoneNumber) => {
-    console.log(`Now Dialling ${phoneNumber}`);
+    console.log(`Dialling: Now Dialling ${phoneNumber}`);
   };
 }
 
@@ -71,5 +72,9 @@ const telephoneObserver = new TelephoneObserver();
 
 telephone.addObserver(telephoneObserver);
 
+console.log("\n");
+
 telephone.AddPhoneNumber("2347023232");
 telephone.DialPhoneNumber("2347023232");
+
+console.log("\n");
