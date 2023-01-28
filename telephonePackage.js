@@ -9,7 +9,7 @@ class Telephone {
   constructor() {
     this.observers = new Set(); // set of observers
 
-    this.phoneNumbers = []; // An array of phoneNumbers
+    this.phoneNumbers = []; // An array of phoneNumbers. contains list of observers to be notified whenever a phone number is dialled
   }
 
   // method to add phone number to the phoneNumbers Array
@@ -55,10 +55,12 @@ class TelephoneObserver {
     this.dialObserver(phoneNumber);
   }
 
+  // method to add the first observer
   viewObserver = (phoneNumber) => {
     console.log(`PhoneNumber: ${phoneNumber}`);
   };
 
+  // method to add the second observer
   dialObserver = (phoneNumber) => {
     console.log(`Dialling: Now Dialling ${phoneNumber}`);
   };
@@ -74,7 +76,10 @@ telephone.addObserver(telephoneObserver);
 
 console.log("\n");
 
+// First observer
 telephone.AddPhoneNumber("2347023232");
+
+// Second observer
 telephone.DialPhoneNumber("2347023232");
 
 console.log("\n");
