@@ -19,7 +19,7 @@ node telephonePackage.js
 
 ```
 
-## Sample output I
+## Sample output
 
 - If the `telephonePackage.js` is run as it is on this repository, the Output should look like as shown below.
 
